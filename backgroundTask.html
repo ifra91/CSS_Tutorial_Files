@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Background Tasks</title>
+    <style>
+        /*2. Full Page Color*/
+        body{
+            background: #f0f0f0;
+        }
+        .header{
+            background-color: skyblue;
+            height:100px;
+        }
+        .main{
+            background-color: ghostwhite;
+            height:300px;
+            /*Add Background Image*/
+            background-image: url("CollegPage/images/Gemini_Generated_Image_lhmfcglhmfcglhmf.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .footer{
+            background-color:lightpink;
+            height:200px;
+        }
+        .btn{
+            width: 150px;
+            height:50px;
+            border-radius: 20px;
+            background-color: lightcoral;
+            cursor:grab;
+        }
+        .btn:hover{
+            background-color: rgb(120, 203, 203);
+        } 
+        .about p{
+            background-color: rgba(32, 178, 171, 0.09);
+            quotes: """ """;
+        }        
+    </style>
+</head>
+<!-- 1 Background Color-->
+
+<body>
+    <header class="header" >
+        <h1>Header Section</h1>
+    </header>
+    <hr>
+    <main class="main">
+        <p>Main Body Section</p>
+        <br>
+        <!--Button with hover effect-->
+        <button class="btn">Click For Updates</button>
+    </main>
+    <about class="about">
+        <p><q>The function of education is to teach one to think intensively and to think critcally</q></p>
+        </p>
+    </about>
+    <hr>
+    <footer class="footer">
+        <p>Footer Section</p>
+    </footer>
+</body>
+
+</html>

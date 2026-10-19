@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Background</title>
+    <style>
+        *{
+            margin: 2px;
+        }
+        body{
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .value-color{
+            background-color: blue;
+            width:200px;
+            height:200px;
+        }
+        .hash-color{
+            background-color: #eca4b3;
+            width: 200px;
+            height: 200px;
+        }
+        .rgba-color{
+            background-color: rgba(0,0,0,0.5);
+            width: 200px;
+            height:200px;
+        }
+        .transparent-color{
+            background-color: transparent;
+            width:200px;
+            height:200px;
+            border:1px solid black;
+        }
+        .inherit-color{
+            background-color: inherit;
+            width:200px;
+            height:200px;
+            border:1px solid black;
+        }
+        .box{
+            background-image: url("CollegPage/images/Gemini_Generated_Image_xylrs1xylrs1xylr.png");
+            width:200px;
+            height:200px;
+            image-rendering: crisp-edges;
+            image-resolution: unset;
+            color: rgb(9, 8, 8);
+            font-weight:900;
+            border:2px solid black;
+        }
+        .image{
+            background-image: url("CollegPage/images/Gemini_Generated_Image_lhmfcglhmfcglhmf.png");
+        }
+        .gradient{
+            background-image: linear-gradient(to right, red, pink, skyblue, yellow);
+        }
+        .radial{
+            background-image: radial-gradient(circle, pink, lightblue, rgb(230, 182, 137), seagreen);
+        }
+        .no-repeat{
+            background-image: url("CollegPage/images/Gemini_Generated_Image_lhmfcglhmfcglhmf.png");
+            background-repeat: no-repeat;
+        }
+        .repeat{
+            background-repeat: repeat;
+        }
+        .repeat-x{
+            background-repeat: repeat-x;
+        }
+        .repeat-x p{
+            position: relative;
+            top: 100px;
+        }
+        .repeat-y{
+            background-repeat: repeat-y;
+            writing-mode: vertical-rl;
+        }
+        .space{
+            background-repeat: space;
+        }
+        .round{
+            background-repeat: round;
+        }
+        .pos-center{
+            background-position: center;
+        }
+        .pos-topleft{
+            background-position: top left;
+        }
+        .pos-bottomright{
+            background-position: bottom right;
+        }
+        .centering{
+            background-position: 50% 50%;
+        }
+        .custom{
+            background-position: 20px 40px;
+        }
+        .cover{
+            background-size: cover;
+        }
+        .contain{
+            background-size:contain;
+        }
+        .auto{
+            background-size:auto
+        }
+        .percent{
+            background-size:100% 100%;
+        }
+        .fixed{
+            background-attachment:fixed
+        }
+        .scroll{
+            background-attachment: scroll;
+        }
+        .local{
+            background-attachment: local;
+        }
+        .border-box{
+            background-clip:border-box;
+        }
+        .padding-box{
+            background-clip:padding-box;
+            padding:20px;
+        }
+        .content-box{
+            background-clip: content-box;
+            padding:20px;
+        }
+        .text{
+            background-image: linear-gradient(to right, rgb(231, 79, 79), steelblue );
+            background-clip: text;
+            -webkit-background-clip: text; /*CSS for text gradient*/
+            color: transparent;
+        
+        }
+        .border-origin{
+            background-origin: border-box;
+        }
+        .padding-origin{
+            background-origin: padding-box;
+            padding:5px;
+        }
+        .content-origin{
+            background-origin: content-box;
+        }
+        .normal-blend{
+            background-blend-mode: normal;
+            background-color: #eca4b3;
+        }
+        .multiply-blend{
+            background-blend-mode: multiply;
+            background-color: blueviolet;
+        }
+        .overlay-blend{
+            background-blend-mode: overlay, luminosity;
+            background-color: greenyellow;
+        }
+        .screen-blend{
+            background-blend-mode:screen;
+            background-color: yellow;
+        }
+        .darken-blend{
+            background-blend-mode:darken, luminosity;
+            background-color: goldenrod;
+        }
+        .lighten-blend{
+            background-blend-mode:lighten, luminosity;
+            background-color: skyblue;
+        }
+        /*background shorthand property 
+        background-color, image, position size, attachment
+        origin, clip
+        We can use gradient, image, position, size, repeat, scroll,
+        origin, clip
+        */
+        .short-background{
+            background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)
+            center no-repeat fixed padding-box border-box);
+        }
+        .b-new{
+            width: 200px;
+            height:200px;
+            border:2px solid black;
+        }
+        .gradient-property{
+            background:linear-gradient( rgb(153, 153, 231), pink, rgb(227, 227, 141), rgb(153, 218, 153));
+ 
+        }
+        .grad-right{
+            background:linear-gradient(to right, lightpink, rgb(139, 192, 139), rgb(226, 155, 226), rgb(143, 231, 247))
+        }
+        .grad-left{
+            background:linear-gradient(to left, rgb(255, 178, 178),rgb(255, 255, 173),rgb(190, 255, 190),rgb(159, 159, 255));
+        }
+        .grad-top{
+            background:linear-gradient(to top, skyblue,lightcoral,seagreen,goldenrod);
+        }
+        .grad-bottom{
+            background:linear-gradient(to bottom,rgb(255, 214, 137),rgb(243, 175, 243),rgb(198, 119, 255),rgb(188, 248, 188),rgb(243, 184, 243));
+        }
+        .grad-45deg{
+            background:linear-gradient(45deg, rgba(248, 201, 107,0.3),#ffc0cb,rgba(132, 212, 241, 0.7),rgb(196, 255, 196, 0.5));
+        }
+        .grad-90deg{
+            background:linear-gradient(90deg, rgba(161, 161, 239) 20%,rgba(194, 255, 194, 0.8) 50%,rgb(255, 169, 183, 0.5),rgba(196, 62, 62, 0.5));
+        }
+        
+        .rad-circle{
+            background: radial-gradient(circle, pink, blue);
+        }
+        .rad-ellipse{
+            background: radial-gradient(ellipse closest-side, red, blue, transparent);
+        }
+        .rad-far{
+            background: radial-gradient(circle farthest-side, rgb(252, 234, 153), rgb(248, 140, 203), transparent);
+        }
+        .rad-closest-corner{
+            background: radial-gradient(ellipse closest-corner, rgb(123, 172, 217), rgb(220, 112, 112));
+        }
+        .rad-farthest-corner{
+            background: radial-gradient(circle farthest-corner, red, blue);
+        }
+        .rad-center{
+            background: radial-gradient(circle at center, red, yellow);
+        }
+        .rad-top-left{
+            background: radial-gradient(ellipse at top left, red, yellow);
+        }
+        .rad-percent{
+            background: radial-gradient(circle, red 10%, yellow 80%);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Background Properties</h1>
+    <!--background-color-->
+    <h2>Example of Background Color</h2>
+    <div class="value-color">
+        The value of color like red, green, blue used for testing
+        named colors for quick setup
+    </div>
+    <div class="hash-color">
+        Used for final design colors
+        Extract colors using hex values
+    </div>
+    <div class="rgba-color">
+        for overlay modals
+        example of black with 50% transparency value
+    </div>
+    <div class="transparent-color">
+        Button, overlay
+        background will be invisible
+    </div>
+    <div class="inherit-color">
+        Used for nested Elements
+        It takes background from parent element
+    </div>
+
+    <!--Background-image-->
+    <h2>Example of Background Image</h2>
+    <div class="box image">
+        Adds Image in back-ground
+    </div>
+    <div class="box gradient">
+        linear-gradient example Smooth transitions of colors
+        background with gradient design
+    </div>
+    <div class="box radial">
+        circular gradient spreading outward from center
+    </div>
+
+    <!--Background-Repeat-->
+    <h2>Example of Background Repeat</h2>
+    <div class="box no-repeat">
+        Not repeat images in background; Banners,logos
+    </div>
+    <div class="box repeat">
+        Repeat horizontally and veritcally; patterns and Textures
+    </div>
+    <div class="box repeat-x">
+        <p>It repeats image left to right; Horizontal stripes</p>
+    </div>
+    <div class="box repeat-y">
+        It repeats top to bottom
+        Vertical repetition of images; for vertical tiling
+    </div>
+    <div class="box space">
+        Creates even spacing between images in back-ground
+    </div>
+    <div class="box round">
+        Adjusts Image size and fit in back-ground
+    </div>
+
+    <!--Background-Position-->
+    <h2>Background Position</h2>
+    <div class="box pos-center">
+        Used for hero image; Showing Image in between
+    </div>
+    <div class="box pos-topleft">
+        Used for logo background
+        set image on upper left  side
+    </div>
+    <div class="box pos-bottomright">
+        Decorative content right side down
+    </div>
+    <div class="box centering">
+        Gives center position to image
+    </div>
+    <div class="box custom">
+        gives custom offset to background image
+    </div>
+
+    <!--Background Size-->
+    <h2>Background Size</h2>
+    <div class="box cover">
+        Used for hero Section and Banner : Image covers full screen
+        it can get cropped as well
+    </div>
+    <div class="box contain">
+        Used with Logos
+        Image is fully visible without getting cropped
+    </div>
+    <div class="box auto">
+        default size if image in background;
+        Original size is maintained
+    </div>
+    <div class="box percent">
+        Used to stretch image;
+        width and height both gets stretched
+    </div>
+
+    <!--Background-attachment-->
+    <h2>Background Attachment</h2>
+    <div class="box fixed">
+        Used for Parallax effect
+        Image remains static on page scroll
+    </div>
+    <div class="box scroll">
+        By default scroll is set as background attachment
+        Image and content gets scrolled with content
+    </div>
+    <div class="box local">
+        Used for Scrollable divs
+        Scroll inside image element div
+    </div>
+
+    <!--Background-clip-->
+    <h2>Background Clip</h2>
+    <div class="box border-box">
+        Full Area Backgroun visible till border
+    </div>
+    <div class="box padding-box">
+        Background is visible till padding area
+        inside border         
+    </div>
+    <div class="box content-box">
+        only for content area
+        Inner content
+    </div>
+    <div class="box text">
+        Gradient text; Gradient inside text (-webkit-prefix)        
+    </div>
+
+    <!--Background Origin-->
+    <h2>Background Origin</h2>
+    <p clas="box">It decides whether image start from border, padding or content</p>
+    <div class="box border-origin">
+        Used for Full size background; Image starts 
+        with border
+    </div>
+    <div class="box padding-origin">
+        Commonly used; image starts from padding
+    </div>
+    <div class="box content-origin">
+        Controlled placement; Image starts from content area
+    </div>
+
+    <!--Background-Blend-Mode-->
+    <h2>Background Blend Mode</h2>
+    <p class="box">USed for mixing/blending background color with image</p>
+    <div class="box normal-blend">
+        It is applied by default No Blend
+    </div>
+    <div class="box multiply-blend">
+        Dark Effects : Color and image gets multiplied
+    </div>
+    <div class="box overlay-blend">
+        Overlay Effects : Bright and Dark are mixed for readability 
+    </div>
+    <div class="box screen-blend">
+        Used for Light Backgrounds; For lightened Blending
+    </div>
+    <div class="box darken-blend">
+        Used for contrast adjustment only dark area visible
+    </div>
+    <div class="box lighten-blend">
+        Used for contrast adjustment only light area visible
+    </div>
+
+    <!--Background shortcut property-->
+    <div class="box short-background">
+        Example of shortcut property for background
+        gradient+image+position+size
+        +repeat+scroll+origin+clip   
+    </div>
+
+    <!--Limear-gradient-->
+    <h2>Linear Gradient Property</h2>
+    <div class="b-new gradient-property">
+        Example of gradient Property
+    </div>
+    <div class="b-new grad-right">
+        Gradient in right direction
+    </div>
+    <div class="b-new grad-left">
+        Left Diretion
+    </div>
+    <div class="b-new grad-top">
+        Top Direction
+    </div>
+    <div class="b-new grad-bottom">
+        By default bottom direction
+    </div>
+    <div class="b-new grad-45deg">
+        at 45 degree
+    </div>
+    <div class="b-new grad-90deg">
+        at 90 degree
+    </div>
+
+    <!--Radial Gradient-->
+    <div class="b-new rad-circle">
+        Gradient from center to outward
+    </div>
+    <div class="b-new rad-ellipse">
+        Gradient in form of ellipse
+    </div>
+    <div class="b-new rad-far">
+        Gradient spread distance
+    </div>
+    <div class="b-new rad-closest-corner">
+        Gradient : Closest Corner
+    </div>
+    <div class="b-new rad-farthest-corner">
+        Gradient : Farthest Corner
+    </div>
+    <div class="b-new rad-center">
+        Gradient : Center;
+    </div>
+    <div class="b-new rad-top-left">
+        Gradient : Top Left Corner
+    </div>
+    <div class="b-new rad-percent">
+        Gradient : Percent
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!--Absolute Unit-->
+    <div class="absolute-container">
+        <p>The Unit is not responsive it has fixed size.</p>
+        <ul>
+            <li>px Pixels fixed sized good for precision called screen pixel</li>
+            <li>pt points print media unit used for print css - resume, newspaper, article. 
+                Its 1/72th part of an inch</li>
+            <li>cm centimeters used with print media, gives fixed size of element for priniting web generated
+                document</li>
+            <li>mm millimeters used for physical pages A4, ID cards, barcodes</li>
+            <li>in inches </li>
+            <li>pc picas used for typesetting book, magazines, newspapers used for large print layouts and typography</li>
+        </ul>
+        <img src="https://tapwell.in/product/ribbon-hamper-box/" alt="a box">
+    </div>
+
+    <!--Relative Unit-->
+    <div class="relative-container">
+        <p>Relative units are used for making elements responsive
+            The child element can auto-adjust according to parent element.
+            It is used to create elements responsive as per screen size
+        </p>
+        <ul>
+            <li>
+                Percent % decides its size according percentage with respect 
+                to parent
+            </li>
+            <li>em Element- relative It scales font-size on parent basis. 
+                if parent element font-size is 12px then 1em = 12px
+            </li>
+            <li>rem Root-em It scales element font size according to root-html 
+                font size</li>
+            <li>ex x-height it is equal to character height, it is font 
+                specific; we can change vertical alignment and spacing
+            </li>
+            <li>ch character width 1 character width; used for forms, text boxes
+                allows width according to space a character takes
+            </li>
+            <li>lh line height 
+                <ol>
+                    <li>Decided on basis of </li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div class="viewport-container">
+        <p>View Port Container</p>
+        <ul>
+            <li>
+                Viewport width vw percent of screen width
+            </li>
+            <li>viewport height vh percent of screen height</li>
+            
+        </ul>
+    </div>
+<br><br>
+    <div class="vmax">
+        <p>ViewPort Max Container</p>
+        <ol>
+            <li>Viewport Max </li>
+            <li>1% of screen width and height which is larger</li>
+            <li>Scales according to larger side of screen</li>
+            <li>used to give larger look</li>
+        </ol>
+    </div>
+<br><br>
+        <div class="vmin">
+        <p>ViewPort Min Container</p>
+        <ol>
+            <li>Viewport Min </li>
+            <li>1% of screen widht/height which is smaller in size</li>
+            <li>Scale element according to smaller side of screen</li>
+            <li>Gives Responsive layout according to width and height</li>
+        </ol>
+    </div>
+<br><br>
+<!--Grid-->>
+<div class="grid">
+    <div>1fr</div>
+    <div>2fr</div>
+    <div>3fr</div>
+</div>
+<br><br>
+<!--Time Unit - For Animation -->
+
+
+
+
+<!--Angle Units-->
+
+</body>
+</html>

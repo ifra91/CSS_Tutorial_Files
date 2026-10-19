@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units 1</title>
+    <style>
+        .box{
+            width:80%;
+            background-color: skyblue;
+            padding: 10px;
+        }
+        .parent{
+            font-size: 20px;
+        }
+        .child{
+            font-size: 1.5em; /* 1.5 * 20 = 30px */
+            padding: 1em; /* 1em= 30px */
+        }
+        html{
+            font-size: 16px;
+        }
+        .text{
+            font-size: 2rem;
+            padding: 1rem;
+        }
+        .full-banner {
+            width: 100vw;
+            height: 50vh;
+            background-color: lightgreen;
+        }
+        .fixed-box{
+            width:300px;
+            height: 100px;
+            background: coral;
+        }
+        input{
+            width: 20ch; /*space for 20 chararcters*/
+        }
+        .ex-padding{
+            font-size: 20px;
+            padding-top: 2ex;
+            background: lightyellow;
+        }
+        .text{
+            line-height: 24px;
+            margin-top: 21lh;
+            padding: 1lh;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* 1:2 ratio*/
+            gap: 10px
+        }
+        .grid div{
+            background: lightblue;
+            padding: 10px;
+        }
+        .btn{
+            background: steelblue;
+            color:white;
+            padding:10px 20px;
+            transition: background-color 5s ease;
+        }
+        .btn:hover{
+            background: darkblue;
+        }
+        .rotate{
+            display: inline-block;
+            transform: rotate(45deg);
+            background: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">80% of width of parent</div>
+    <div class="parent">Parent
+        <div class="child">Child with 1.5em font and 1em padding</div>
+    </div>
+    <div class="text">Using rem for consistent font and padding</div>
+    <div class="full-banner">50% of screen height</div>
+    <div class="fixed-box">Fixed size box</div>
+    <input type="text" placeholder="Enter username" />
+    <div class="ex-padding"> Padding using ex unit </div>
+    <div class="text">Spacing using lh unit</div>
+    <div class="grid">
+        <div>1fr</div>
+        <div>2fr</div>
+    </div>
+    <button class="btn">Hover</button>
+    <div class="rotate">Rotated Box</div>
+</body>
+</html>

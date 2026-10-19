@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .block{
+            display:block;
+            border:1px solid #8fd3e8;
+            background: #dff7ff;
+            padding:10px;
+            margin-bottom:5px;
+        }
+
+        .inline{
+            display:inline;
+            background:#fff2b3;
+            border: 1px solid #d6c56f;
+            padding:10px;
+            margin-right: 5px;
+        }
+
+        .inline-block{
+            display:inline-block;
+            width:100px;
+            height:60px;
+            background:#dbe8c7;
+            border: 1px solid #9ab47a;
+            padding:10px;
+            margin-right:5px;
+        }
+        .hide{
+            display:none;
+        }
+
+        .flex-container{
+            display:flex;
+            gap:10px;
+            background:#ffe3ed;
+            padding:10px;
+        }
+        .flex-item{
+            background:#ff5ca8;
+            color:white;
+            padding: 10px 20px;
+            border-radius:5px;
+        }
+        .grid-container{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:10px;
+            background:#e9ddff;
+            padding:10px;
+        }
+        .grid-item{
+            background:#7d4bcc;
+            color:white;
+            padding:15px;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Display : Block</h2>
+    <div class="block">
+        Block 1
+    </div>
+    <div class="block">Block 2</div>
+    <br>
+    <h2>Inline Element</h2>
+    <div class="inline">
+        <span>Inline 1</span>
+        <span>Inline 2</span>
+        <span>Inline 3</span>
+    </div>
+    <br>
+    <br>
+    <div class="inline-block">Box 1</div>
+    <div class="inline-block">Box 2</div>
+    <div class="inline-block">Box 3</div>
+
+    <!--None-->
+    <h2> Display : None </h2>
+    <p class="hide">Ye paragraph hidden hai</p>
+    <p>Upar wala paragraph invisible hai using
+        <code>display:none</code>
+    </p>
+
+    <!--Flex-->
+    <h2>Display: Flex</h2>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <!--Grid-->
+    <h2>Display: Grid</h2>
+    <div class="grid-container">
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">Grid 4</div>
+    </div>
+
+</body>
+</html>

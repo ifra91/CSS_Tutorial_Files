@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Css Fonts</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            margin-left:20px;
+        }
+        .parent-em{
+            font-size:20px;
+        }
+        .child-em{
+            font-size: 3em;
+            background-color: bisque;
+        }
+        .child-rem{
+            font-size: 3rem;
+            background-color: pink;
+        }
+        .child-percent{
+            font-size:200%;
+            background-color: skyblue;
+        }
+        .child-perc{
+            font-size:200%;
+            background-color: aliceblue;
+        }
+        .width-vw{
+            font-size: 4vw;
+            width: 50vw;
+            background-color: peachpuff;
+        }
+        .height-vh{
+            font-size: 4vh;
+            height: 10vh;
+            background-color: lightsalmon;
+        }
+        .example-clamp {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            background-color: rgb(250, 192, 120);
+        }
+        .horizontal-tb{
+            writing-mode: horizontal-tb;
+            background-color: lightyellow;
+            height: 200px;
+            width:200px;
+        }
+        .vertical-lr{
+            writing-mode: vertical-lr;
+            background-color: gray;
+            height: 200px;
+            width:200px;
+        }
+        .vertical-rl{
+            writing-mode: vertical-rl;
+            background-color: lightblue;
+            height: 200px;
+            width:200px;
+        }
+        .sideways-rl{
+            writing-mode: sideways-rl;
+            background-color: lightcoral;
+            height: 200px;
+            width:200px;
+
+        }
+        .sideways-lr{
+            writing-mode: sideways-lr;
+            background-color: lightpink;
+            height: 200px;
+            width:200px;
+        }
+        .overflow-clip{
+            white-space: nowrap; overflow: hidden; text-overflow: clip;
+            background-color: aliceblue;
+        }
+        .overflow-ellipse{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow:hidden;
+            background-color: antiquewhite;
+        }
+        .overflow-wrap-normal{
+            width: 200px;
+            overflow-wrap: normal;
+            background-color: pink;
+        }
+        .overflow-wrap-break{
+            width: 200px;
+            overflow-wrap: break-word;
+            background-color: lightblue;
+        }
+        .overflow-wrap-anywhere{
+            width: 200px;
+            overflow-wrap: anywhere;
+            background-color: lightcyan;
+        }
+        .hyphen-manual{
+            hyphens:manual;
+            width: 200px;
+            background-color: antiquewhite;
+        }
+        .hyphen-auto{
+            hyphens:auto;
+            width:100px;
+            background-color: aliceblue;
+        }
+        .tab-size-4{
+            tab-size: 4;
+        }
+        .tab-size-2{
+            tab-size: 2;
+        }
+        .tab-size-8{
+            tab-size: 8;
+        }
+        .quotes{
+            quotes: '';
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p style="font-family: 'Arial', sans-serif;">This is ariel font(Sans-serif)</p>
+
+    <p style="font-family: 'Courier New', monospace;">This is courier New Font(Monospace)</p>
+    <br><br><hr>
+    <!--font-size-->
+    <p style="font-size: 20px">This is 20px font size(fixed)</p>
+    <p style="font-size: 1.5rem;">This is 1.5 rem font size(responsive)</p>
+    <p style="font-size: 120%;">This is 120% of parent size</p>
+    <p style="font-size: 5vw;">This is 5vw font size (viewport-based)</p>
+    <p style="font-size: clamp(1rem, 4vw, 2.5rem);"> This is clamp-based responsive font-size</p>
+    <p style="font-size: large">This is LARGE text</p>
+    <p style="font-size: larger">This is LARGER text</p>
+    <p style="font-size: x-large">This is X-LARGE text</p>
+    <p style="font-size: xx-large">This is XX-LARGE text</p>
+    <p style="font-size: smaller">This is Smaller text</p>
+    <p style="font-size: small">This is Smaller text</p>
+    <p style="font-size: x-small">This is x-Small text</p>
+    <p style="font-size: xx-small">This is xx-Smaller text</p>
+    <br><br><hr>
+
+    <div class="parent-em">
+        <p class="child-em">This is em Example</p>
+        <p class="child-rem">This is rem Example</p>
+        <p class="child-percent">This is an example of percentage</p>
+    </div><br><hr>
+
+    <p class="child-perc">This is an example of percentage</p>
+    <p class="width-vw">Example of ViewPort-width</p>
+    <p class="height-vh">Example of ViewPort-height</p>
+    <br><hr>
+    
+    <h3>clamp() Responsive Font Size</h3>
+    <div class="example-clamp">This is clamp() responsive text</div>
+
+    <br><br><hr>
+    <!--font-style-->
+    <p style="font-style:normal;">Normal font-style</p>
+    <p style="font-style:italic;">Italic font-style</p>
+    <p style="font-style:oblique;">Oblique font-style</p>
+    <br><br><hr>
+    <!--font-weight-->
+    <p style="font-weight: 100;">Ultra Thin(100)</p>
+    <p style="font-weight: 400;">Normal - 400</p>
+    <p style="font-weight: 500;">Medium - 500</p>
+    <p style="font-weight: 600;">Semi-bold - 600</p>
+    <p style="font-weight: 700;">Bold - 700</p>
+    <p style="font-weight: 800;">Extra Bold - 800</p>
+    <p style="font-weight: 900;">Ultra Bold - 900</p>
+    <br><br><hr>
+    <!--font-variant-->
+    <p style="font-variant: normal;">Font-Variant : Normal: paragraph, regular text</p>
+    <p style="font-variant: small-caps;">Font-variant: small-caps: Capital Letters small size : Subheadings, names</p>
+    <br><br><hr>
+    <!--Text-Properties-->
+    <p style="text-align: left;">Text aligned to left side(by default)</p>
+    <p style="text-align: right;">Text aligned to right side</p>
+    <p style="text-align:center;">Text aligned in center</p>
+    <p style="text-align: justify;">Text is aligned stretched in left and right side</p>
+    <p style="text-align: start;">Text aligns at start position</p>
+    <p style="text-align: end;">Text aligns at end position</p>
+    <br><br><hr>
+    <!--Text-decoration-->
+    <p style="text-decoration: none;">Text Decoration is None</p>
+    <p style="text-decoration: underline;">Text Decoration is underline(anchor-tag)</p>
+    <p style="text-decoration: overline;">Line on upper side of text(special headings/design)</p>
+    <p style="text-decoration: line-through;">Strike through Effect(outdated price, cancel-item)</p>
+    <p style="text-decoration:underline overline;">Lines on both upper and lower side of text(not frequently used)</p>
+    <p style="text-decoration: underline wavy;">Wavy underlined text</p>
+    <p style="text-decoration: underline double;">Double underlined text</p>
+    <p style="text-decoration: underline dashed;">Dashed underlined text</p>
+    <p style="text-decoration: underline dotted;">Dashed underlined text</p>
+    <p style="text-decoration: underline solid;">Dashed underlined text</p>
+    <br><br><hr>
+    <!--Text-Indent-->
+    <p style="text-indent: 3rem; background-color:rgb(248, 248, 145)">Text Indent Relative(rem)</p>
+    <p style="text-indent: 16px; background-color:skyblue">Fixed/ Absolute indentation px</p>
+    <p style="text-indent: 3em; background-color:pink;">relative indentation em</p>
+    <p style="text-indent: -20px; background-color:rgb(246, 246, 183);"> Negative value from Left Indent</p>
+    <hr>
+    <!--Letter Spacing-->
+    <p style="letter-spacing: normal;">This is normal spacing</p>
+    <p style="letter-spacing: 4px;">This is custom spacing on 4px/em/rem</p>
+    <p style="letter-spacing: -2px;">Tight spacing of -2px</p>
+    <hr>
+    <!--Word-spacing-->
+    <p style="word-spacing:normal">This is normal word spacing text</p>
+    <p style="word-spacing: 5px;">This is increased word spacing</p>
+    <p style="word-spacing:-3px">This is negative word spacing</p>
+    <hr>
+    <!--Line Height-->
+    <p style="line-height:normal;background-color: lightgoldenrodyellow">The line height is normal</p>
+    <p style="line-height:1;background-color: gainsboro">The line height is 1</p>
+    <p style="line-height:1.5;background-color: lightcoral">The line height is 1.5</p>
+    <p style="line-height:3; background-color: pink;">The line height is 3</p>
+    <p style="line-height:24px;background-color: skyblue">The line height is 24px</p>
+    <p style="line-height:150%;background-color: lightgray">The line height is 150%</p>
+    <hr>
+    <!--White Space-->
+    <p style="white-space: normal;;background-color: lightgray">Some spaced            text        New Line. will wrap         normally</p>
+    <p style="white-space: nowrap;;background-color: lightpink">The line has white space that will nowrap to next line 
+        " matter chiefly in the form of words or symbols that is treated as data for processing by computerized equipment"
+    " something (such as a story or movie) considered as an object to be examined, explicated, or deconstructed"
+1   </p>
+    <p style="white-space: pre;background-color: lightseagreen;" >Used for Pre-formatted Line breaks and spaces will be preserved
+        "HyperText Markup Language (HTML) is the standard language used to create
+         and structure content on the web. 
+         It serves as the fundamental skeleton of every webpage, 
+         instructing internet browsers on how to display text, images, links, and multimedia.
+        Here is a breakdown of how text is managed, 
+        structured,        and styled using HTML:
+        <br>   1.        Document Structure
+        Every standard webpage relies on a boilerplate 
+        <br>structure that separates hidden metadata from the visible content. 
+        <br>The content visible to a user lives entirely inside the <body> tag"
+    </p>
+    <p style="white-space: pre-wrap;background-color: lightyellow;">
+         Advanced Elements
+For specialized text layouts, HTML provides containers to display structural data:
+• Hyperlinks ("anchor-tag"): Text wrapped in this tag becomes a clickable link using the 
+    href attribute to specify the destination URL.
+• Lists : Text can be organized into bulleted (unordered) 
+    lists via "ul-tag" or numbered (ordered) lists via "ol-tags", 
+    with individual items wrapped in "li-tags" tags.
+• Preformatted Text "pre-tag": By default, HTML collapses multiple empty spaces or 
+    line breaks into a single space. Wrapping text in a 
+    "pre-tag" forces the browser to display white space and line breaks
+         exactly as they are typed in the code editor
+    </p>
+
+    <p style="white-space:pre-line;background-color: lightcyan;">
+        If you are planning to build something, let me know:
+• Are you writing a complete article, a landing page, or a form?
+• Do you want to add CSS styling to change colors and fonts?
+• Would you like a complete code template you can copy and paste?
+    </p>
+
+    <p style="white-space:break-spaces; background-color: lightslategrey;">
+        Lorem ipsum   dolor sit amet,       consectetur adipiscing elit.
+    Sed do eiusmod   tempor incididunt ut labore et dolore magna aliqua.
+
+
+Ut enim ad minim   veniam, quis nostrud     exercitation ullamco laboris
+nisi ut aliquip ex   ea commodo   consequat.
+
+
+        Duis aute irure dolor in reprehenderit   in voluptate velit
+  esse cillum dolore eu fugiat nulla pariatur.
+
+
+
+Excepteur sint occaecat   cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum.
+    </p>
+    <hr>
+    <!--Direction-->
+    <p style="direction:ltr; background-color: lightcoral;">
+        "Language is a beautiful bridge that connects hearts.
+         When we speak with love and respect, differences disappear, and deep friendships are born."
+        "भाषा एक खूबसूरत पुल है जो दिलों को जोड़ती है। 
+        जब हम प्यार और सम्मान के साथ बात करते हैं, 
+        तो दूरियां मिट जाती हैं और गहरी दोस्ती का जन्म होता है।"
+    </p>
+    <p style="direction: rtl; background-color: lightsalmon;">
+        "زبان ایک خوبصورت پل ہے جو دلوں کو جوڑتی ہے۔
+         جب ہم پیار اور احترام کے ساتھ بات کرتے ہیں، تو دوریاں
+          مٹ جاتی ہیں اور گہری دوستی کا جنم ہوتا ہے۔"
+    </p>
+    <hr>
+    <!--Text Shadow-->
+    <p style="text-shadow: 2px 2px 5px gray;">
+        This is simple soft shadow
+    </p>
+    <p style="text-shadow: 0 0 5px red;">
+        Red Glowing text Neon/Glow Effect
+    </p>
+    <p style="text-shadow: 1px 1px 0 black;">
+        Sharp shadow without blur; Bold Title with shadow
+    </p>
+    <p style="text-shadow: 1px 1px red, -1px -1px blue;">
+        Multiple shadows with comma; Complex designs 3d effect
+    </p>
+    <hr>
+    <!--Text-Overflow-->
+    <p class="overflow-clip">
+    Hindi is written from left to right in Devanagari, while Urdu is written from right to left in a Perso-Arabic script called Nastaliq.
+    Hindi often borrows formal words from Sanskrit (e.g., Bhaasha for language, Sammaan for respect). Urdu borrows heavily from Persian and Arabic (e.g., Zabaan for language, Ehtiraam for respect)
+    </p>
+    <p class="overflow-ellipse">
+        Cascading Style Sheets (CSS) is the foundational technology used to control the presentation, layout, and visual formatting of web pages. While HTML provides the structural bones of a webpage (like headings and paragraphs), CSS delivers the skin, style, and visual layout
+    </p>
+    <br><br><hr>
+    <!--Writing Mode-->
+    <p class="horizontal-tb">This is example of horizontal writing mode</p><br>
+    <p class="vertical-lr">This is vertical-lr mode. text-flows top t bottom and line stack right to left </p><br>
+    <p class="vertical-rl">This is vertical-rl mode  text-flows top t bottom and line stack left to right</p><br>
+    <p class="sideways-rl">This is sideways-rl mode </p><br>
+    <p class="sideways-lr">This is sideways-lr mode </p><br>
+
+    <br><hr>
+    <!--Overflow-wrap-->
+    <p class="overflow-wrap-normal">Overflow-wrap Normal Default used for long words</p>
+    <p class="overflow-wrap-break">URLstechnicaltextemailaddressusergeneratedcontent</p>
+    <p class="overflow-wrap-anywhere">Emergency wrapping for long text in small space</p>
+
+    <br><hr>
+    <!--hyphens-->
+    <p class="hyphen-none">Default in most Browsers</p>
+    <p class="hyphen-manual">for inserting manual hyphen</p>
+    <p class="hyphen-auto">Autaomated by browser; long words in small containers In new browsers the hyphen is added automatically for long words</p>
+    <br><hr>
+    <!--tab-size
+    -Decides the tab size when using <pre> and <code> tags
+    -->
+    <pre class="tab-size-4">Default Indentation: Programming editors, blocks
+    function helloWorld(){
+        string name = "hello";
+        console.log(name);
+    }
+    </pre>
+    <pre class="tab-size-2">JS, HTML. CSS for compact Indentation : used in modern code editors
+    function sayHello() {
+        console.log("Hello World");
+    }
+    </pre>
+    <pre class="tab-size-8">Wide tab spacing Old code and print previews
+    function sayHello() {
+        console.log("Hello World");
+    }
+    </pre>
+    <br><br>
+    <!--quotes-->
+    <q>This is quoted Text</q>
+    <p class="quotes">This is curly Quotes</p>
+
+    <!--unicode-bidi--
+    -normal - simple ltr or rtl
+    -embed - uses parent direction as default also chnages according to nested element
+    -bidi-override - overrides direction forcefully for mirrored arabic and english layout
+    -isolate - it does not apply bidi property on text; prevents unwanted direction effects
+    -isolate-override - Isolate + override dono ek saath; 
+    -plaintex - direction is set according to user input; Inputs, chat-apps, dynamic content
+-->
+<div style="direction: rtl; unicode-bidi: bidi-override;">
+  English and عربی mix with override
+</div>
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+</head>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        padding: 20px;
+    }
+    h2{
+        margin-bottom: 10px;
+    }
+    .box{
+        background: #eef6ff;
+        border: 2px solid #2f80ed;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .min-width-box{
+        min-width:150px;
+    }
+    .max-width-box{
+        max-width: 500px;
+    }
+    .card{
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+        color:rgb(132, 42, 9);
+        background: rgb(236, 205, 168);
+        width: 300px;
+        height: 500px;        
+        font-family: 'Courier New', monospace;
+        font-style: oblique;
+        font-size:x-large;
+        line-height: 2px;
+        line-break:anywhere;
+    }
+    hr{
+        height: 5px;
+        background: black;
+    }
+    .box-model{
+        margin:10px;
+        border:2px solid red;
+        padding:20px;
+        width:200px;
+        height:200px;
+        background-color: rgb(213, 238, 162);
+        font-size: 20px;
+    }
+    .height{
+        height:300px;
+        background-color: lightgray;
+    }
+    .min-height{
+        min-height: 100px;
+        background-color: lightpink;
+    }
+    .max-height{
+        max-height: 400px;
+        background-color: lightslategray;
+    }
+    .box-sizing{
+        box-sizing:border-box;
+        background-color: lightgoldenrodyellow;
+    }
+    .box-p{
+        border:2px dashed rgb(83, 231, 224);
+        font-size:large;
+        margin-bottom: 10px;
+    }
+    .padding{
+        padding: 20px;
+        background-color: lightcyan;
+    }
+    .padding-top{
+        padding-top: 10px;
+        background-color: lightblue;
+    }
+    .padding-right{
+        padding-right: 15px;
+        background-color: rgb(106, 160, 178)
+    }
+    .padding-bottom{
+        padding-bottom: 10px;
+        background-color: rgb(186, 186, 227);
+    }
+    .padding-left{
+        padding-left: 15px;
+        background-color: lightsteelblue;
+    }
+    .box-b{
+        background-color: rgb(239, 220, 169);
+        margin-bottom: 10px;
+    }
+    .border-width{
+        border: 2px solid black;
+    }
+    .border-style{
+        border: 2px dotted coral;
+    }
+    .border-color{
+        border: 2px solid green;
+    }
+    .border-radius{
+        border-radius: 10px;
+    }
+    .border-top{
+        border-top: 3px dashed blue;
+    }
+    .border-top-left-radius{
+        border-bottom-right-radius: 20px;
+    }
+    .margin{
+        margin:10px;
+    }
+    .margin-top{
+        margin-top: 30px;
+    }
+    .margin-right{
+        margin-right: auto;
+    }
+    .margin-bottom{
+        margin-bottom: 40px;
+    }
+    .margin-left{
+        margin-left:auto
+    }
+    .margin-auto{
+        margin: auto;
+    }
+    .content-box{
+        margin-top:10px;
+        box-sizing: content-box;
+    }
+    .border-box{
+        box-sizing:border-box;
+    }
+    .inherit{
+        box-sizing: inherit;
+    }
+    .initial{
+        box-sizing:initial;
+    }
+    .unset{
+        box-sizing:unset;
+    }
+
+</style>
+<body>
+    <div class="box">
+        <p> Example of Box Model </p>
+    </div>
+
+    <div class="box-model">
+        <p>This is an example of Box-model 
+            padding, margin, Border
+        </p>
+    </div>
+
+    <!--Content Area Properties-->
+    <h2>Content Area Properties</h2>
+    <div class="box width-box">
+        <p>Box Width : 200px</p>
+    </div>
+    <div class="box min-width-box">
+        <p>min-width will be set to 150px</p>
+    </div>
+    <div class="box max-width-box">
+        <p>Maximum limit will be set as max-width</p>
+    </div>
+    <div class="box height">
+        Sets only content area height 300px
+    </div>
+    <div class="box min-height">
+        Sets minimum height 100px
+    </div>
+    <div class="box max-height">
+        Sets Maximum height 400px
+    </div>
+    <div class="box box-sizing">
+        Calculates width/height including padding and border
+        : border-box
+    </div>
+
+    <!--Padding Properties-->
+    <div class="box-p padding">
+        Gives equal padding on all sides 20px
+    </div>
+    <div class="box-p padding-top">
+        Provides top padding 10px
+    </div>
+    <div class="box-p padding-right">
+        Provides right pading to box 15px
+    </div>
+    <div class="box-p padding-bottom">
+        Give bottom padding to box 10px
+    </div>
+    <div class="box-p padding-left">
+        Gives Padding: left 15 px
+    </div>
+
+    <!--Border Properties-->
+    <div class="box-b border">
+        Border with 2px solid black
+    </div>
+    <div class="box-b border-width">
+        Width of border 3px
+    </div>
+    <div class="box-b border-style">
+        border with dotted style
+    </div>
+    <div class="box-b border-color">
+        Give Border Color red
+    </div>
+    <div class="box-b border-radius">
+        For rounded corners with radius 10px    
+    </div>
+    <div class="box-b border-top">
+        give different at any side left right bottom or padding-top
+        here using border-top 2 px
+    </div>
+    <div class="box-b border-top-left-radius">
+        for rounding specific corners
+    </div>
+
+    <!--Margin Properties-->
+    <div class="box margin">
+        Example of margin with 10px;
+    </div>
+    <div class="box margin-top">
+        Example of margin-top with 30px;
+    </div>
+    <div class="box margin-right">
+        Example of margin-right with auto
+    </div>
+    <div class="box margin-bottom">
+        Example of bottom margin 40px
+    </div>
+    <div class="box margin-left">
+        Example of margin left auto
+    </div>
+    <div class="box margin-auto">
+        Example of margin auto gives center alignnment
+    </div>
+
+    <!--Box Sizing Properties-->
+    <div class="box content-box">
+        width and height include content only
+    </div>
+    <div class="box border-box">
+        Width and height is calculated after content padding and border
+    </div>
+    <div class="box inherit">
+        Copies box-sizing value of parent element
+    </div>
+    <div class="box initial">
+        reset width and height to content-box
+    </div>
+    <div class="box unset">
+        if values given in parent element will be inherited;
+        otherwise will set default value
+    </div>
+
+
+    <!--Typography Task-->
+    <div class="card">
+        <h3>Contact Us</h3>
+        <hr><br>
+        <div class="name-section">
+        <p><b>Name</b> : Ifra Khan</p><br>
+        <p><b>Email</b>: <br>IfraKhan@gmail.com</p><br>
+        <p><b>Phone</b>: 1234567890</p><hr><br>
+        </div>
+        <p><b>Services Provide</b> :  </p>
+        <p> Web Development </p>
+    </div>
+    
+
+</body>
+</html>

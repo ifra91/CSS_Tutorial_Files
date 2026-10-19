@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Styling</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            margin: 2vw;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(to right, rgb(249, 146, 163) 0%, rgb(252, 196, 204) 25%, rgb(255, 218, 218) 50%, rgb(249, 149, 165) 100%);
+        }
+        /* @media (width <= 500px) {
+            body{
+                background-size: cover;
+            }
+        }
+        @media (500px <= width <= 900px) {
+            body{
+                background-size: cover;
+            }
+        } */
+        .header h1{
+            display: flex;
+            justify-content: space-around;
+            background-clip:text;
+            background-image: linear-gradient(to left, blue, red , purple);
+            color:transparent;
+        }
+        .header{
+            margin: 2vw;
+            padding: 2vw;
+        }
+        .main{
+            margin: 3% 3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .card{
+            background-color: rgb(201, 216, 223);
+            display: flex;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin:5%;
+            padding:2%;
+            width: max-content;
+        }
+        .userName{
+            align-content: normal;
+        } 
+        .card *{
+            padding: 2%;
+            margin:2%;
+        }
+        .card img{
+            position:relative;
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Creative Styling</h1>
+    </header>
+    <hr>
+    <main class="main">
+        <div class="card">
+            <h2>Display Card</h2>
+            <hr>
+            <img src=" " alt="profile picture">
+            <hr>
+            <div class="userName">
+                <b>Name</b>: Name 1<br>
+                <b>Contact Number</b>: 123456789<br>
+                <b>Email</b>: name@emailaddress.com<br>
+            </div>
+            <hr>
+            <q>User Reviews</q>
+        </div>
+        <div class="card">
+            <h2>Display Card</h2>
+            <hr>
+            <img src=" " alt="profile picture">
+            <hr>
+            <div class="userName">
+                <b>Name</b>:Name 2<br>
+            <b>Contact Number</b>: 123456789<br>
+            <b>Email</b>: name@emailaddress.com<br>
+            </div>
+            <hr>
+            <q>User Reviews</q>
+        </div>
+        <div class="card">
+            <h2>Display Card</h2>
+            <hr>
+            <img src=" " alt="profile picture">
+            <hr>
+            <div class="userName">
+                <b>Name</b>: Name 3<br>
+                <b>Contact Number</b>: 123456789<br>
+                <b>Email</b>: name@emailaddress.com<br>
+            </div>
+            <hr>
+            <q>User Reviews</q>
+        </div>
+    </main>
+    <hr>
+    <footer></footer>
+    
+</body>
+</html>

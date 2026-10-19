@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Position</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        .section{
+            width: auto;
+            height: 400px;
+        }
+
+        .static{
+            background-color: steelblue;
+            position:static;
+        }
+
+        .relative{
+            background-color: seagreen;
+            position: relative;
+            top:0;
+            left:100px;
+            /* bottom:100px; */
+            /* right:300px; */
+            
+        }
+
+        .absolute-parent{
+            position:relative;
+            height:300px;
+            border: 2px dashed gray;
+        }
+
+        .absolute{
+            background:tomato;
+            position:absolute;
+            top:50px;
+            left:100px;
+        }
+
+        .fixed{
+            background: purple;
+            position:fixed;
+            top:0;
+            right:20px;
+            z-index:10;
+            text-align:center;
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .sticky{
+            background: coral;
+            position: sticky;
+            z-index:20;
+            top:400px;
+            left:20px;
+        }
+
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <!--Static Box-->
+    <h2>Static Position</h2>
+    <div class="section">
+        <div class="box static">
+            Static Box    
+        </div>
+        <p>Default: follow normal flow, top/left ignored
+    </div>
+    <hr>
+
+    <!--Relative Box-->
+    <h2>Relative Position</h2>
+    <div class="section">
+        <div class="box relative">
+            Relative Box
+        </div>
+        <p>Moves from its original place but keeps its space</p>
+    </div>
+    <hr>
+
+    <!--Absolute Box-->
+    <h2>Absolute Position</h2>
+    <div class="section absolute-parent">
+        <div class="box absolute">
+            Absolute Box
+        </div>
+        <p style="margin-left:140px;">
+            Positioned relative to nearest positioned ancestor.
+        </p>
+    </div>
+    <hr>
+
+    <!--Fixed Box-->
+    <h2>Fixed Position</h2>
+    <div class="section">
+        <div class="box fixed">
+            Fixed Box
+        </div>
+    </div>
+    <hr>
+
+    <!--Sticky Box-->
+    <h2>Sticky Position</h2>
+    <div class="section">
+        <div class="box sticky">
+            Sticky Box
+        </div>
+        <p>Acts like relative until top is reached, then sticks.</p>
+        <div class="space"></div>
+    </div>
+    <hr>
+</body>
+</html>
